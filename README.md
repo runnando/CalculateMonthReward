@@ -1,11 +1,8 @@
 # CalculateMonthReward
 ## Descripition
-#### 1. Retrieve JSON, parse, and print information on page
-#### 2. My project have one entity: employee
+#### 1. This is a spring-boot application
+#### 2. There are two entities: transaction and record; transaction's column: ID,userId, name, amount; By calculating, new information will store in object record, and return to the front page; Record is consist of userId, name, rewardPerMonth, and totalamount; rewardPerMonth is a map which store each month's reward point  
 #### 3. Use JSONObject to parse JSON file retrieve from provided URL
 #### 4. Use stream api complete two features: sorted and filter
 
-## Bug and Problem
-#### 1. Response error: 429 Too Many Requests
-#### 2. At first time, about rest template, can not understand why getForObject() and getForEntity() return object; At last find out I can define any return class I want process; I choose String, but still don't know how to implement logic if I use Object.
-#### 3. Did not use POJO; Map entity with JSON in JasonParseService; Use POJO could be better.
+
