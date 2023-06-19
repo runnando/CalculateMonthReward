@@ -31,7 +31,7 @@ public class TransactionController {
         return customerService.getCustomers();
     }
 
-    @GetMapping(path = "/GetPoints")
+    @GetMapping(path = "/points")
     //Return all customers' every month reward point
     public ResponseEntity<List<Record>> getAllCustomersPoint(){
         try{
@@ -48,7 +48,7 @@ public class TransactionController {
         }
     }
 
-    @GetMapping(path = "/GetPoints/{userId}")
+    @GetMapping(path = "/points/{userId}")
     //Return the customer's every month reward according to parameter userId
     public ResponseEntity<List<Record>> getCustomerPoint(@PathVariable (name = "userId") String userId){
         try{

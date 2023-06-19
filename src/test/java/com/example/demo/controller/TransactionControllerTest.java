@@ -137,14 +137,14 @@ class TransactionControllerTest {
     @Test
     void canGetAllCustomersPoint() throws Exception {
         when(transactionService.getAllCustomersPoint()).thenReturn(testRecordList1);
-        this.mockMvc.perform(MockMvcRequestBuilders.get("/GetPoints")).
+        this.mockMvc.perform(MockMvcRequestBuilders.get("/points")).
                 andDo(print()).andExpect(status().isOk());
     }
 
     @Test
     void canGetCustomerPoint() throws Exception {
         when(transactionService.getCustomerPointById("m09821276")).thenReturn(testRecordList1);
-        this.mockMvc.perform(MockMvcRequestBuilders.get("/GetPoints/" + "m09821276")).
+        this.mockMvc.perform(MockMvcRequestBuilders.get("/points/" + "m09821276")).
                 andDo(print()).andExpect(status().isOk());
     }
 }
