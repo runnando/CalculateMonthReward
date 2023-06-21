@@ -15,6 +15,7 @@ import java.util.List;
 @Service
 public class TransactionServiceImpl implements TransactionService {
 
+    @Autowired
     private TransactionRepository customerRepository;
 
     @Autowired
