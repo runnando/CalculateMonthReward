@@ -7,10 +7,7 @@ import com.example.demo.service.TransactionServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,12 +23,14 @@ public class TransactionController {
     }
 
     @GetMapping
+    @ResponseBody
     //Return all customers' information
     public List<Transaction> getCustomers(){
         return customerService.getCustomers();
     }
 
     @GetMapping(path = "/points")
+    @ResponseBody
     //Return all customers' every month reward point
     public ResponseEntity<List<Record>> getAllCustomersPoint(){
         try{
@@ -49,6 +48,7 @@ public class TransactionController {
     }
 
     @GetMapping(path = "/points/{userId}")
+    @ResponseBody
     //Return the customer's every month reward according to parameter userId
     public ResponseEntity<List<Record>> getCustomerPoint(@PathVariable (name = "userId") String userId){
         try{

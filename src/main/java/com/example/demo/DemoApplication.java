@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.example.demo.repository","com.example.demo.controller","com.example.demo.service"})
+@ComponentScan(basePackages = {"com.example.demo.repository","com.example.demo.controller","com.example.demo.service","com.example.demo.config"})
 
 public class DemoApplication {
 
